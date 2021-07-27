@@ -13,8 +13,49 @@
 <body>
     <div id="headerFrame">
         <header id="header" class="flexbox">
-            <div id="headerLogo">헤더로고</div> <!-- div#headerLogo -->
-            <nav id="headerGNB">메인메뉴</nav> <!-- nav#headerGNB -->
+            <div id="headerLogo"><a href="#"><!-- main page로 이동 --></a></div> <!-- div#headerLogo -->
+            <nav id="headerGNB">
+                <ul id="gnbMain" class="flexbox">
+                    <li class="mainLi">
+                        <a href="#">클럽 서비스 안내</a>
+                        <ul class="gnbSub flexbox">
+                            <li class="subLi"><a href="#">드롱기 VIP클럽 소개</a></li>
+                            <li class="subLi"><a href="#">클럽 혜택 안내</a></li>
+                            <li class="subLi"><a href="#">드롱기 홍보대사 특별선물</a></li>
+                            <li class="subLi"><a href="#">드롱기 컨셉 스토어</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">특별 구매 · 이벤트</a>
+                        <ul class="gnbSub flexbox">
+                            <li class="subLi"><a href="#">이달의 제품</a></li>
+                            <li class="subLi"><a href="#">이벤트</a></li>
+                            <li class="subLi"><a href="#">이벤트 당첨자 발표</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">마이페이지</a>
+                        <ul class="gnbSub flexbox">
+                            <li class="subLi"><a href="#">멤버십 카드보기</a></li>
+                            <li class="subLi"><a href="#">추천 지인 정보</a></li>
+                            <li class="subLi"><a href="#">개인정보 관리</a>
+                                <ul id="personalInfoMenu">
+                                    <li class="personalInfoLi"><a href="#">개인정보수정</a></li>
+                                    <li class="personalInfoLi"><a href="#">회원탈퇴</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">고객센터</a>
+                        <ul class="gnbSub flexbox">
+                            <li class="subLi"><a href="#">뉴스</a></li>
+                            <li class="subLi"><a href="#">자주하는 질문</a></li>
+                            <li class="subLi"><a href="#">1:1 문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav> <!-- nav#headerGNB -->
             <nav id="headerLNB">서브메뉴</nav> <!-- nav#headerLNB -->
         </header> <!-- header#header -->
     </div> <!-- div#headerFrame -->

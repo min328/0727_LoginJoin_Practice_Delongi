@@ -5,3 +5,12 @@ header {
 header div {
   border: 1px solid #fff;
 }
+
+nav#headerGNB,
+nav#headerLNB {
+  border: 1px solid #fff;
+}
+
+li.mainLi > a {
+  border: 1px solid #fff;
+}
