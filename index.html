@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롱기 로그인페이지 클론연습</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+
+</head>
+<body>
+    <div id="headerFrame">
+        <header id="header" class="flexbox">
+            <div id="headerLogo">헤더로고</div> <!-- div#headerLogo -->
+            <nav id="headerGNB">메인메뉴</nav> <!-- nav#headerGNB -->
+            <nav id="headerLNB">서브메뉴</nav> <!-- nav#headerLNB -->
+        </header> <!-- header#header -->
+    </div> <!-- div#headerFrame -->
+    
+    <div id="wrap">
+        <div id="loginLinkContainer">
+            로그인 홈으로 아이콘과 링크
+        </div> <!-- div#loginLinkContainer -->
+
+        <main id="main">
+            <div id="loginTitle">로그인</div> <!-- div#loginTitle -->
+            <div id="loginFunction">
+                <p>VIP 클럽의 다양한 서비스와 혜택을 받으실 수 있습니다.</p>
+
+                <button data-link="loginByEmail" class="loginTabBtn selected">이메일</button>
+                <button data-link="loginByMembership" class="loginTabBtn">멤버십 번호</button>
+
+                <div id="loginByEmail" class="tabContents">
+                    <div class="flexbox">
+                        <div class="loginData">
+                            <input type="text" placeholder="1"><br>
+                            <input type="text" placeholder="2">
+                        </div> <!-- div.loginData -->
+                        <div class="loginBtn">
+                            LOG IN
+                        </div> <!-- div.loginBtn -->
+                    </div>
+                </div> <!-- div#loginByEmail -->
+
+                <div id="loginByMembership" class="tabContents">
+                    <div class="flexbox">
+                        <div class="loginData">
+                            <input type="text" placeholder="1"><br>
+                            <input type="text" placeholder="2">
+                        </div> <!-- div.loginData -->
+                        <div class="loginBtn">
+                            LOG IN
+                        </div> <!-- div.loginBtn -->
+                    </div>
+                </div> <!-- div#loginByMembership -->
+
+            </div> <!-- div#loginFunction -->
+
+            <nav id="mainLNB">
+
+            </nav> <!-- nav#mainLNB -->
+
+        </main> <!-- main#main -->
+    </div> <!-- div#wrap -->
+</body>
+</html>
