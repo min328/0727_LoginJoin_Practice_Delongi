@@ -56,13 +56,40 @@
                     </li>
                 </ul>
             </nav> <!-- nav#headerGNB -->
-            <nav id="headerLNB">서브메뉴</nav> <!-- nav#headerLNB -->
+            <nav id="headerLNB">
+                <ul id="lnbMain" class="flexbox">
+                    <li class="mainLi">
+                        <a href="#"><img
+                             src="images/icon_login.png"
+                            ></a>
+                        <span>로그인</span>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">
+                            <img src="images/icon_cart.png">
+                        </a>
+                        <span>장바구니</span>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#">
+                            <img src="images/icon_join.png">
+                        </a>
+                        <span>회원가입</span>
+                    </li>
+                    <li class="mainLi">
+                        <a href="#"><img
+                             src="images/icon_shipping.png"></a>
+                        <span>주문/배송조회</span>
+                    </li>
+                </ul>
+            </nav> <!-- nav#headerLNB -->
         </header> <!-- header#header -->
     </div> <!-- div#headerFrame -->
     
     <div id="wrap">
         <div id="loginLinkContainer">
-            로그인 홈으로 아이콘과 링크
+            <a href="#"><img src="images/icon_home.png"></a>
+            <span>Log-in</span>
         </div> <!-- div#loginLinkContainer -->
 
         <main id="main">
@@ -70,14 +97,16 @@
             <div id="loginFunction">
                 <p>VIP 클럽의 다양한 서비스와 혜택을 받으실 수 있습니다.</p>
 
-                <button data-link="loginByEmail" class="loginTabBtn selected">이메일</button>
-                <button data-link="loginByMembership" class="loginTabBtn">멤버십 번호</button>
+                <div id="tabArea" class="flexbox">
+                    <button data-link="loginByEmail" class="loginTabBtn selected">이메일</button>
+                    <button data-link="loginByMembership" class="loginTabBtn">멤버십 번호</button>
+                </div> <!-- div#tabArea -->
 
                 <div id="loginByEmail" class="tabContents">
                     <div class="flexbox">
                         <div class="loginData">
-                            <input type="text" placeholder="1"><br>
-                            <input type="text" placeholder="2">
+                            <input type="text" placeholder="E-mail"><br>
+                            <input type="password" placeholder="Password">
                         </div> <!-- div.loginData -->
                         <div class="loginBtn">
                             LOG IN
@@ -88,8 +117,8 @@
                 <div id="loginByMembership" class="tabContents">
                     <div class="flexbox">
                         <div class="loginData">
-                            <input type="text" placeholder="1"><br>
-                            <input type="text" placeholder="2">
+                            <input type="text" placeholder="Membership Number"><br>
+                            <input type="password" placeholder="Password">
                         </div> <!-- div.loginData -->
                         <div class="loginBtn">
                             LOG IN

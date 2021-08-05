@@ -7,50 +7,190 @@ div#headerFrame {
   width: 100%;
   height: 110px;
   background-color: rgb(12, 38, 69);
+  position: fixed;
 }
+
 #headerFrame header#header {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
   justify-content: space-between;
 }
+
 #header div#headerLogo {
   width: 240px;
   background-image: url(../images/delonghi_vip_club.png);
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #headerLogo a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
+
 #header nav#headerGNB {
-  width: 620px;
+  width: 610px;
 }
+
 #headerGNB ul#gnbMain {
+  height: 100%;
   position: relative;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
+
 #headerGNB li.subLi {
   position: absolute;
   display: none;
 }
+
 #headerGNB li.mainLi > a {
-  display: inline-block;
   color: #fff;
-  padding: 40px 0;
-  margin: 0 30px;
+  height: 100%;
+  line-height: 110px;
+  display: block;
+
   font-size: 16px;
 }
+
 #header nav#headerLNB {
-  width: 215px;
+  width: 240px;
 }
+
+#headerLNB ul#lnbMain {
+  height: 100%;
+  justify-content: space-between;
+}
+
+#lnbMain li.mainLi a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 110px;
+  text-align: center;
+}
+
+#lnbMain li.mainLi span {
+  color: #fff;
+  font-size: 11px;
+  font-weight: lighter;
+  display: block;
+  position: relative;
+  top: -30px;
+  visibility: hidden;
+}
+
+/* 메뉴 하이라이트 기능 start */
+#header li.mainLi:hover > a {
+  color: #3289e8;
+  border-bottom: 5px solid #3289e8;
+}
+/* 메뉴 하이라이트 기능 end */
 /* header영역 end */
 
 /* main영역 start */
 div#wrap {
-  width: 1200px;
+  padding-top: 110px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#wrap div#loginLinkContainer {
+  height: 50px;
+  line-height: 50px;
+}
+
+#loginLinkContainer a img {
+  position: relative;
+  top: -3px;
+}
+
+#loginLinkContainer span {
+  line-height: 50px;
+  margin-left: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+main#main div#loginTitle {
+  height: 130px;
+  border-bottom: 2px solid #000;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 130px;
+}
+
+#main div#loginFunction {
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#loginFunction p {
+  color: #444;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+div#tabArea button.loginTabBtn {
+  color: #999;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid rgb(50, 137, 232);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+div#tabArea button.selected {
+  color: rgb(50, 137, 232);
+  border: 1px solid rgb(50, 137, 232);
+  border-bottom: none;
+}
+
+div.tabContents > div {
+  justify-content: space-between;
+}
+
+div.tabContents div.loginBtn {
+  width: 240px;
+  height: 115px;
+  color: #fff;
+  text-align: center;
+  line-height: 115px;
+  background-color: rgb(50, 137, 232);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+div.tabContents div.loginData {
+  width: 460px;
+}
+
+.loginData input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #ccc;
+}
+
+.loginData input:focus {
+  outline: 1px solid rgb(50, 137, 232);
+}
+
+.loginData input:first-child {
+  margin-bottom: 11px;
+}
+
+.loginData input::placeholder {
+  color: #ccc;
+  text-indent: 20px;
+  font-size: 16px;
 }
 
 div#loginByMembership {
