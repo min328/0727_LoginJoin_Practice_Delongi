@@ -1,4 +1,19 @@
 $(function(){
+
+    $("ul#gnbMain li.mainLi").mouseover(function(){
+        $(this).children("ul").css({
+            "display" : "flex"
+        });
+        $("div#GNB_bg").stop().show();
+    });
+    $("ul#gnbMain li.mainLi").mouseout(function(){
+        $(this).children("ul").css({
+            "display" : "none"
+        });
+        $("div#GNB_bg").stop().hide();
+    });
+
+    // tab 버튼에 따른 로그인 방법 전환
     $("div#loginFunction button").click(function(){
         $("#loginFunction button").removeClass("selected");
         $(this).addClass("selected");

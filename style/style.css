@@ -2,16 +2,23 @@
 @import url(reset.css);
 @import url(guideline.css);
 
-body {
-  height: 3000px;
-}
-
 /* header영역 start */
 div#headerFrame {
   width: 100%;
   height: 110px;
   background-color: rgb(12, 38, 69);
   position: fixed;
+  z-index: 10;
+}
+
+div#GNB_bg {
+  background-color: #fff;
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 8;
+  display: none;
 }
 
 #headerFrame header#header {
@@ -34,29 +41,54 @@ div#headerFrame {
   height: 100%;
 }
 
+/* gnb menu */
 #header nav#headerGNB {
   width: 610px;
 }
 
 #headerGNB ul#gnbMain {
   height: 100%;
-  position: relative;
-  justify-content: space-evenly;
 }
 
-#headerGNB li.subLi {
+/* 메인 메뉴 4개 */
+#gnbMain li.mainLi > a {
+  display: inline-block;
+  color: #fff;
+  height: 110px;
+  margin: 0 28px;
+  line-height: 110px;
+}
+
+#gnbMain ul.gnbSub {
+  display: flex;
+  justify-content: space-evenly;
   position: absolute;
+  left: 715px;
+  z-index: 9;
+}
+
+#gnbMain li:first-child ul.gnbSub {
+  left: 545px;
+}
+
+#gnbMain ul.gnbSub {
   display: none;
 }
 
-#headerGNB li.mainLi > a {
-  color: #fff;
-  height: 100%;
-  line-height: 110px;
-  display: block;
-
-  font-size: 16px;
+#gnbMain ul.gnbSub li.subLi > a {
+  display: inline-block;
+  padding-top: 30px;
+  padding-right: 60px;
+  font-weight: bold;
 }
+
+ul#personalInfoMenu li a {
+  display: inline-block;
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* header lnb menu */
 
 #header nav#headerLNB {
   width: 240px;
@@ -76,7 +108,7 @@ div#headerFrame {
 }
 
 #lnbMain li.mainLi span {
-  color: #fff;
+  color: #fcfcfc;
   font-size: 11px;
   font-weight: lighter;
   display: block;
@@ -89,6 +121,15 @@ div#headerFrame {
 #header li.mainLi:hover > a {
   color: #3289e8;
   border-bottom: 5px solid #3289e8;
+}
+
+#header ul#lnbMain li.mainLi:hover span {
+  visibility: visible;
+}
+
+#headerGNB li.subLi:hover > a,
+ul#personalInfoMenu li.personalInfoLi a:hover {
+  color: #3289e8;
 }
 /* 메뉴 하이라이트 기능 end */
 /* header영역 end */
@@ -107,6 +148,7 @@ div#wrap {
 #loginLinkContainer a img {
   position: relative;
   top: 1px;
+  z-index: 0;
 }
 
 #loginLinkContainer span {
@@ -116,7 +158,11 @@ div#wrap {
   font-weight: bold;
 }
 
-main#main div#loginTitle {
+main#main {
+  padding-bottom: 230px;
+}
+
+#main div#loginTitle {
   height: 130px;
   border-bottom: 2px solid #000;
   font-size: 50px;
@@ -245,3 +291,54 @@ nav#mainLNB {
 }
 
 /* main영역 end */
+
+/* footer영역 start */
+div#footerFrame {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(12, 38, 69);
+}
+
+footer#footer {
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#footer nav#footerLnb {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(37, 60, 88);
+}
+
+#footer nav#footerLnb ul {
+  justify-content: center;
+}
+
+#footer nav#footerLnb a {
+  color: #eee;
+  padding-left: 10px;
+  background: url(../images/dot.png) 0 10px no-repeat;
+}
+
+#footer nav#footerLnb li:not(:first-child) a {
+  margin-left: 50px;
+}
+
+#footer div#footerLogo {
+  margin: 30px 0;
+}
+
+#footer div#contactInfo * {
+  color: #697e88;
+  font-size: 14px;
+}
+
+#contactInfo ul {
+  justify-content: center;
+}
+
+#contactInfo p {
+  padding: 9px;
+}
+/* footer영역 end */
